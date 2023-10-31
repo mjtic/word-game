@@ -12,6 +12,7 @@ This is a straightforward word game, implemented with JavaScript and Web APIs. I
 
 ### Dependencies
 All you need is a web brower to play this game
+WORD GAME: [https://mjtic.github.io/word-game/]
 
 ### Installing
 
