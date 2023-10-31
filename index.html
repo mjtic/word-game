@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WORD GUESS GAME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Limelight&family=Montserrat:wght@100&family=Raleway:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wordgameContainer">
+      <section class="gameBoy">
+        <div id="gameContainer">
+          <h1 id="heading">WORD GAME</h1>
+          <div id="gameScreen">
+            <ul id="contentList">
+              <li id="status">ENTER THE KEYS TO FILL IN THE BLANK</li>
+              <li id="time">TIME WILL COUNT DOWN ONCE GAME STARTS</li>
+              <li id="questions"></li>
+              <li id="answers"></li>
+            </ul>
+          </div>
+          <div id="gameButton">
+            <button type="button" id="startBtn" name="game-button">
+              start
+            </button>
+          </div>
+          <div id="displayOnly">
+            <div id="arrowKeys">
+              <div id="horizontalArrow"></div>
+              <div id="verticalArrow"></div>
+            </div>
+            <div id="circleKeys">
+              <div id="circleA">A</div>
+              <div id="circleB">B</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="scoreBoard">
+        <div id="boardContainer">
+          <h1 id="scoreHeading">SCOREBOARD</h3>
+          <ul id="scores">
+            <li id="win"><span id="winScore"></span></li>
+            <li id="loss"><span id="loseScore"></span></li>
+          </ul>
+          <div id="scoreReset">
+            <button type="reset" id="resetBtn">reset</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <a href="https://github.com/mjtic"
+        ><h3>Made with ❤️️ by mjtic &copy; 2023</h3></a
+      >
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
+<!-- 
+    win and lose count should be localStoraged
+    button start, timer start and reset
+    word-bank = [];
+    blanks _ _ _ _
+    keypress , keyEvent
+    word === blank => replace with letter
+    gameEnds === timerEnds => message appear and timer stop
+    total winds and looses on the screen at the end
+-->
+<!-- 
+## Instructions
+
+The completed application should meet the following criteria:
+
+* As a user, I want to start the game by clicking on a button. 
+
+* As a user, I want to try and guess a word by filling in a number of blanks that match the number of letters in that word.
+
+* As a user, I want the game to be timed. 
+
+* As a user, I want to win the game when I have guessed all the letters in the word.
+
+* As a user, I want to lose the game when the timer runs out before I have guessed all the letters.
+
+* As a user, I want to see my total wins and losses on the screen. 
+
+### Specifications
+
+* When a user presses a letter key, the user's guess should be captured as a key event.
+
+* When a user correctly guesses a letter, the corresponding blank "_" should be replaced by the letter. For example, if the user correctly selects "a", then "a _ _ a _" should appear. 
+
+* When a user wins or loses a game, a message should appear and the timer should stop. 
+
+* When a user clicks the start button, the timer should reset. 
+
+* When a user refreshes or returns to the brower page, the win and loss counts should persist.
+ -->
