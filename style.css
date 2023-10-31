@@ -11,7 +11,7 @@
 body {
   background-color: var(--primary);
   font-family: "Limelight", sans-serif;
-  padding: 20px;
+  padding: 100px;
   margin: 0 auto;
 }
 /* container of gameboy and scoreboard */
@@ -20,6 +20,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 50px;
+
 }
 
 /* gameboy */
@@ -53,6 +54,7 @@ h3 {
   border-style: ridge;
   border-color: var(--secondary);
   color: #ffffff;
+  font-size: 22px;
 }
 #contentList{
     display: flex;

@@ -1,6 +1,6 @@
 # WORD-GAME
 
-This is a simple hang-man stlye WORDGAME using JavaScript and Web APIs. 
+This is a straightforward word game, implemented with JavaScript and Web APIs. It's a mixed trivia timed quiz where each question is allocated a 2-minute timeframe.
 
 ## TOOLS
 
@@ -8,36 +8,54 @@ This is a simple hang-man stlye WORDGAME using JavaScript and Web APIs.
 * CSS
 * JAVASCRIPT
 
+## INSTRUCTION
 
-The completed application should meet the following criteria:
+### Dependencies
+All you need is a web brower to play this game
 
-* As a user, I want to start the game by clicking on a button. 
+### Installing
 
-* As a user, I want to try and guess a word by filling in a number of blanks that match the number of letters in that word.
+ * Download the zip file or clone the repository to your local machine. [git@github.com:mjtic/word-game.git]
 
-* As a user, I want the game to be timed. 
+### Author
 
-* As a user, I want to win the game when I have guessed all the letters in the word.
-
-* As a user, I want to lose the game when the timer runs out before I have guessed all the letters.
-
-* As a user, I want to see my total wins and losses on the screen. 
+MJ Jeong - https://github.com/mjtic
 
 ### Specifications
+Complete Guide to how to play:
+![Alt text](image.png)
+![Alt text](image-1.png)
+* When a user clicks on the "start" button word game will start.
 
-* When a user presses a letter key, the user's guess should be captured as a key event.
+* When a user presses a letter key, the user's guess gets captured as a key event.
 
-* When a user correctly guesses a letter, the corresponding blank "_" should be replaced by the letter. For example, if the user correctly selects "a", then "a _ _ a _" should appear. 
+* When a user correctly guesses a letter, the corresponding blank "_" is replaced by the letter. For example, if the user correctly selects "a", then "a _ _ a _" will appear. 
 
-* When a user wins or loses a game, a message should appear and the timer should stop. 
+* When a user wins or loses a game, a message appear and the timer stops. 
 
-* When a user clicks the start button, the timer should reset. 
+* When a user clicks the start button, the timer resets.
 
-* When a user refreshes or returns to the brower page, the win and loss counts should persist.
+* When a user clicks on "reset" button located on scoreboard, the scores on the board will reset.
 
-## 💡 Notes
 
-Refer to the documentation:
+## 💡 Version History
+
+* v00
+  *  Inital Release
+
+## License
+ 
+ * This project is licensed under the [MIT] License - see the LICENSE.md file for details
+
+## 🏆 Acknowledgments
+
+Thanks to:
+
+* Mike Meyers for the amazing design idea [https://unsplash.com/@mike_meyers]
+![Alt text](image-2.png)
+![Alt text](image-3.png)
+
+Referred to the documentation:
 
 * [MDN Web Docs on KeyboardEvent](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent)
 
@@ -51,14 +69,6 @@ Refer to the documentation:
 
 * [MDN Web Docs on localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
-## 🏆 Bonus
-
-If you have completed this activity, work through the following challenge with your group to further your knowledge:
-
-* How can you add a reset button to set the win and loss counts back to zero? 
-
-Use [Google](https://www.google.com) or another search engine to research this.
-
 ---
 
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+© Made with ❤️️ by mjtic &copy; 2023. 
