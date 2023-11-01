@@ -94,19 +94,6 @@ h1 {
   justify-content: center;
   align-items: center;
 }
-#startBtn {
-  max-width: 120px;
-  max-height: 40px;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  background-color: var(--secondPrimary);
-  border-color: var(--secondary);
-  color: var(--secondary);
-  font-size: 32px;
-  font-family: "Limelight", sans-serif;
-  cursor: pointer;
-}
 
 #displayOnly {
   display: flex;
@@ -119,6 +106,7 @@ h1 {
   display: flex;
   flex-direction: row;
 }
+
 #horizontalArrow {
   background-color: #000000;
   width: 40px;
@@ -185,8 +173,8 @@ ul {
   list-style: none;
 }
 
-/* reset button */
-#resetBtn {
+/* button */
+button{
   max-width: 150px;
   max-height: 45px;
   width: 100%;
@@ -216,11 +204,12 @@ footer a:visited {
 }
 footer a:hover {
   transform: translateY(-2px);
+  color: var(--secondaryPink);
   transition: transform 0.3s ease-in-out;
 }
 
-
-@media screen and (max-width:320px) {
+/* small screen */
+@media screen and (min-width:320px) {
   body{
     padding:5px;
   }
@@ -235,25 +224,22 @@ footer a:hover {
     background-color: var(--secondPrimary);
     width: 280px;
     height: 520px;
+    box-shadow: 0px 3px 0px 0px rgba(0, 0, 1, 0.1);
   }
-  #startBtn {
-    width: 80%;
-    height: 90%;
-    font-size: 26px;
-  }
+
   #horizontalArrow {
-    width: 20px;
-    height: 50px;
+    width: 25px;
+    height: 55px;
   }
   #verticalArrow {
-    width: 20px;
-    height: 50px;
+    width: 25px;
+    height: 55px;
   }
   #circleA,
   #circleB {
-  width: 25px;
-  height: 25px;
-  gap: 0px;
+  width: 30px;
+  height: 30px;
+  gap: 25px;
 }
 #boardContainer {
   width: 280px;
@@ -262,6 +248,134 @@ footer a:hover {
 h1,h3{
   font-size: 18px;
 }
+button{
+  width: 100%;
+  height: 90%;
+  font-size: 30px;
+}
+#displayOnly {
+  width: 80%;
+  height: 10%;
+  justify-content: space-between;
+}
+}
+/* medium */
+@media screen and (min-width: 768px) {
+  body{
+    padding:25px;
+  }
+  #wordgameContainer {
+    gap: 25px;
+  }
+  #gameContainer {
+    width: 400px;
+    height: 550px;
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 1, 0.1);
+  }
+  #circleA,
+  #circleB {
+  width: 35px;
+  height: 35px;
+  gap: 25px;
+}
+#boardContainer {
+  width: 350px;
+  height: 250px; 
+}
+h1,h3{
+  font-size: 20px;
+}
+button{
+  width: 100%;
+  height: 90%;
+  font-size: 30px;
+}
+#displayOnly {
+  width: 75%;
+  height: 10%;
+}
+}
+/* tablet */
+@media screen and (min-width: 834px) {
+  body{
+    padding:40px;
+  }
+  #wordgameContainer {
+    gap: 50px;
+  }
+  #gameContainer {
+    width: 450px;
+    height: 600px;
+  }
+  #circleA,
+  #circleB {
+  width: 40px;
+  height: 40px;
+  gap: 25px;
+}
+#boardContainer {
+  width: 400px;
+  height: 250px; 
+}
+h1,h3{
+  font-size: 22px;
+}
+button{
+  width: 100%;
+  height: 90%;
+  font-size: 30px;
+}
+#displayOnly {
+  width: 80%;
+  height: 10%;
 }
 
-
+}
+/* large screen */
+@media screen and (min-width: 1024px) {
+  body{
+    padding:40px;
+  }
+  #wordgameContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 55px;
+  }
+}
+/* larger screen */
+@media screen and (min-width: 1366px) {
+  body{
+    padding:45px;
+  }
+  #wordgameContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 65px;
+  }
+  #gameContainer {
+    width: 550px;
+    height: 700px;
+  }
+  #circleA,
+  #circleB {
+  width: 55px;
+  height: 55px;
+  gap: 25px;
+}
+#boardContainer {
+  width: 500px;
+  height: 400px; 
+}
+h1,h3{
+  font-size: 30px;
+}
+button{
+  width: 100%;
+  height: 100%;
+  font-size: 32px;
+}
+#displayOnly {
+  width: 80%;
+  height: 10%;
+}
+}
