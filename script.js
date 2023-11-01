@@ -58,6 +58,18 @@ let data = [
     'q':'On The Mandalorian, what is Baby Yoda\'s real name?',
     'a':'grogu',
   },
+  {
+    'q':'Who was the first televised President of United Stats of America?(Only Last Name)',
+    'a':'roosevelt',
+  },
+  {
+    'q':'In the Catholic Church, the Bishop of Rome is a title more commonly known as what?',
+    'a':'pope',
+  },
+  {
+    'q':'Actor Tom Holland lip-synced what song on the show Lip Sync Battle?',
+    'a':'umbrella',
+  },
 ];
 //randomize data
 let randomData = Math.floor(Math.random()*data.length);
@@ -109,6 +121,8 @@ let loseGame = (()=>{
 let startTimer = (()=>{
   timer = setInterval(()=>{
     if(timerCount>=0){
+        right.pause();
+        wrong.pause();
         timerCount --;
         times.textContent = `TIME: ${timerCount} seconds`
         clockTicking.play();
@@ -181,25 +195,26 @@ let checkWin = (()=>{
     isWin = true;
   }
 });
-
 // checkLetter
-let checkLetter = ((letter)=>{
+// 1. check if user typed letter existied within selected chosenWord
+// 2. if true, insert user typed letter into blanks
+const checkLetter = ((letter)=>{
   // boolean indicator to show letter is in the chosenWord
   let letterInWord = false;
   for(let i=0; i<numBlank; i++){
     if(chosenWord[i]===letter){
       letterInWord = true;
+      blankLetters[i] = letter;
     }
   }
   if(letterInWord){
-    for(let j=0; j<numBlank; j++){
-      if(chosenWord[j]===letter){
-        blankLetters[j] = letter;
-      }
-    }
-    answer.textContent = blankLetters.join(' ');
+   updateLetters();
   }
 });
+// update to blank with matched letter
+const updateLetters = ()=>{
+  answer.textContent = blankLetters.join(' ');
+}
 
 document.addEventListener('keydown',((e)=>{
   //safeGuard
@@ -213,16 +228,18 @@ document.addEventListener('keydown',((e)=>{
     checkWin();
   }
 }));
-
-init();
-
-startButton.addEventListener('click',startGame);
-
-let resetGame = (()=>{
+// reset the game score on scoreboard
+const resetScore = (()=>{
   winCounter = 0;
   loseCounter = 0;
   setWin();
   setLose();
 });
+// start function allow to play
+const start = ()=>{
+  init();
+  startButton.addEventListener('click',startGame);
+  resetButton.addEventListener('click',resetScore);
+};
 
-resetButton.addEventListener('click',resetGame);
+start();
