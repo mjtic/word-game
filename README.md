@@ -43,6 +43,12 @@ Complete Guide to how to play:
 
 * v00
   *  Inital Release
+* v01
+  *  CSS Update
+      - Media Query
+      - Added more font-colors
+  *  JavaScript Update
+      - Made code more modular
 
 ## License
  
