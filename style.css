@@ -2,14 +2,14 @@
   --primary: #f2b705;
   --secondPrimary: #f29f05;
   --secondary: #2f3d40;
-  --accentPurple:#7a77d9;
+  --accentPurple: #7a77d9;
   --accentPink: #f22786;
-  --secondaryPurple:#ABBDFA;
-  --secondaryPink:#FD88AF;
-  --secondaryGrey: #B2D5DD;
+  --secondaryPurple: #abbdfa;
+  --secondaryPink: #fd88af;
+  --secondaryGrey: #b2d5dd;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -25,7 +25,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 50px;
-
 }
 
 /* gameboy */
@@ -48,23 +47,23 @@ h1,
 h3 {
   font-size: 32px;
 }
-h1{
+h1 {
   box-shadow: inset 1px 1px 2px 2px var(--secondary);
 }
 /* text colors */
-.accent-purple{
+.accent-purple {
   color: var(--accentPurple);
 }
-.accent-pink{
-  color:var(--accentPink);
+.accent-pink {
+  color: var(--accentPink);
 }
-.secondary-purple{
+.secondary-purple {
   color: var(--secondaryPurple);
 }
-.secondary-pink{
-  color:var(--secondaryPink);
+.secondary-pink {
+  color: var(--secondaryPink);
 }
-.secondary-grey{
+.secondary-grey {
   color: var(--secondaryGrey);
 }
 
@@ -75,18 +74,18 @@ h1{
   width: 90%;
   height: 60%;
   border-radius: 5px;
-  border: 5px ridge var(--secondary); 
+  border: 5px ridge var(--secondary);
   color: #ffffff;
   font-size: 22px;
 }
-#contentList{
-    display: flex;
-    justify-content: space-evenly;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+#contentList {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 #gameButton {
   width: 100%;
@@ -219,4 +218,50 @@ footer a:hover {
   transform: translateY(-2px);
   transition: transform 0.3s ease-in-out;
 }
+
+
+@media screen and (max-width:320px) {
+  body{
+    padding:5px;
+  }
+  #wordgameContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  #gameContainer {
+    background-color: var(--secondPrimary);
+    width: 280px;
+    height: 520px;
+  }
+  #startBtn {
+    width: 80%;
+    height: 90%;
+    font-size: 26px;
+  }
+  #horizontalArrow {
+    width: 20px;
+    height: 50px;
+  }
+  #verticalArrow {
+    width: 20px;
+    height: 50px;
+  }
+  #circleA,
+  #circleB {
+  width: 25px;
+  height: 25px;
+  gap: 0px;
+}
+#boardContainer {
+  width: 280px;
+  height: 250px; 
+}
+h1,h3{
+  font-size: 18px;
+}
+}
+
 
