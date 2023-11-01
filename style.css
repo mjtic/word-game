@@ -337,8 +337,7 @@ button{
     padding:40px;
   }
   #wordgameContainer {
-    display: flex;
-    flex-direction: row;
+
     gap: 55px;
   }
 }
