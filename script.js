@@ -223,7 +223,7 @@ const updateLetters = ()=>{
   answer.textContent = blankLetters.join(' ');
 }
 
-document.addEventListener('keydown',((e)=>{
+document.addEventListener('keyup',((e)=>{
   //safeGuard
   if(timerCount===0){
     return;
