@@ -7,6 +7,8 @@ let startButton = document.querySelector("#startBtn");
 let wins = document.querySelector("#winScore");
 let losses = document.querySelector("#loseScore");
 let resetButton = document.querySelector("#resetBtn");
+// hidden input for keyboard - phones and tablets
+let hiddenInput = document.querySelector('#hiddenInput');
 
 // word string
 let chosenWord = '';
@@ -95,6 +97,7 @@ let startGame = (()=>{
   answers = data[randomData].a;
   // start-button disabled once game starts
   startButton.disabled = true;
+  showKeyboard();
   // render question, blanks, timer as game starts
   currentStatus.textContent = 'ENTER THE KEYS TO FILL IN THE BLANK'
   times.textContent = `TIME: ${timerCount} seconds`
@@ -110,12 +113,14 @@ let winGame = (()=>{
   winCounter++;
   setWin();
   startButton.disabled = false;
+  hideKeyboard();
 });
 let loseGame = (()=>{
   currentStatus.textContent = 'GAME OVER';
   loseCounter ++;
   setLose();
   startButton.disabled = false;
+  hideKeyboard();
 });
 // startTimer () for setInterval
 let startTimer = (()=>{
@@ -126,6 +131,7 @@ let startTimer = (()=>{
         timerCount --;
         times.textContent = `TIME: ${timerCount} seconds`
         clockTicking.play();
+
       if((isWin&&timerCount) > 0){
         clearInterval(timer);
         winGame();
@@ -137,6 +143,7 @@ let startTimer = (()=>{
         loseGame();
         clockTicking.pause();
         wrong.play();
+
       }
     }
   },1000);
@@ -243,3 +250,16 @@ const start = ()=>{
 };
 
 start();
+
+// keyboard for mobile devices
+
+// how keyboard (focous the hidden input)
+let showKeyboard = ()=>{
+  hiddenInput.style.top = '0'; //this will bring the input field in to the viewport
+  hiddenInput.focus(); // Focus on the hidden input to show the keyboard
+};
+
+let hideKeyboard = ()=>{
+  hiddenInput.style.top = '-9999px'; //move away the input;
+  hiddenInput.blur(); // blur the hidden input to hide the keyboard;
+};
