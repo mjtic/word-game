@@ -27,14 +27,6 @@ let isWin = false;
 let blankLetters = [];
 let lettersInChosenWord = [];
 
-// Input filtering functions (vanilla JavaScript)
-document.querySelectorAll('.alphaOnly').forEach(function(element){
-  element.addEventListener('input',function(event){
-    this.value = this.value.replace(/[^a-z]/g, '');
-  });
-});
-
-
 let data = [
   {
     q: "What position does Harry play on the Gryffindor Quidditch team? ",
@@ -272,3 +264,9 @@ let hideKeyboard = () => {
 };
 
 
+// Input filtering functions (vanilla JavaScript) - did not work
+/* document.querySelectorAll('.alphaOnly').forEach(function(element){
+  element.addEventListener('input',function(event){
+    this.value = this.value.replace(/[^a-z]/g, '');
+  });
+}); */

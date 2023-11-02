@@ -49,6 +49,8 @@ Complete Guide to how to play:
       - Added more font-colors
   *  JavaScript Update
       - Made code more modular
+  *  Mobile Update
+      - Currently only supports iPhones
 
 ## License
  
